@@ -10,7 +10,8 @@ JOIN `ecommerce-portfolio-2026.northwind.orders` AS o
   ON c.customerID = o.customerID
 JOIN `ecommerce-portfolio-2026.northwind.order_details` AS od  
   ON o.orderID = od.orderID
-WHERE c.country IN ('Germany', 'UK', 'USA', 'Brazil')
+WHERE c.country IN ('Germany', 'UK', 'USA', 'Brazil','Austria')
 GROUP BY c.customerID, c.companyName, c.contactName, c.city, c.country
 ORDER BY totalRevenue DESC, totalOrders DESC
 LIMIT 10
+
