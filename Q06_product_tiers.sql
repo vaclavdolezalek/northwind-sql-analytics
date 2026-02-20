@@ -14,5 +14,6 @@ FROM `northwind.products` AS p
 JOIN `northwind.order_details` AS od
   ON p.productID = od.productID
 GROUP BY p.productID, p.productName, p.unitPrice
-HAVING SUM(od.quantity) > 1000
+HAVING SUM(od.quantity) > 500
 ORDER BY productRevenue DESC, totalUnitsSold DESC
+
